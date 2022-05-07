@@ -87,7 +87,7 @@ The next section of the workflow takes the artifact called `_book` publishes it 
           build_dir: _book/                     # "_site/" by default
           branch: gh-pages                    # hosted
 ```
-the parameters and inputs for this github action may change over time, to see the latest options and version [see here](https://github.com/Cecilapp/GitHub-Pages-deploy). THe key thing in this set up is makeing sure your repository allows read and write functions for the workflow. To see and change these go to settings tab of your github repository followed by the Actions tab scroll down to the `Workflow permissions` section where you want to make sure it is set to read and write.
+the parameters and inputs for this github action may change over time, to see the latest options and version [see here](https://github.com/Cecilapp/GitHub-Pages-deploy). The key component of this process is making sure your repository allows read and write access for the workflow. To see and change these go to settings tab (see figure above) of your github repository followed by the Actions tab scroll down to the `Workflow permissions` section where you want to make sure it is set to read and write.
 
 Once you push that workflow fingers crossed it will render and publish.
 
