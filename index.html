@@ -238,28 +238,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-16"><a href="index.html#cb2-16"></a>          path<span class="op">:</span> Documentation<span class="op">/</span>_book<span class="op">/</span></span></code></pre></div>
 <p>The key parameters in this are <code>bookdown::render_book(input = "Documentation")</code> where if your bookdown is in a subdirectory you need to provid that directory by the <code>input</code> parameter. In addition to the artifact path on the last line <code>path: Documentation/_book/</code>. See how they are both <code>Documentation</code>, that is because this is the directory of my bookdown but this could be any directory that you store your bookdown in.</p>
 <p>The next section of the workflow takes the artifact called <code>_book</code> publishes it to the branch called <code>gh-pages</code> where it can be visualised at your github.io site.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="index.html#cb3-1"></a>  # gh<span class="op">-</span>action <span class="im">from</span> Cecilapp<span class="op">/</span>GitHub<span class="op">-</span>Pages<span class="op">-</span>deploy</span>
-<span id="cb3-2"><a href="index.html#cb3-2"></a>  checkout<span class="op">-</span>and<span class="op">-</span>deploy<span class="op">:</span></span>
-<span id="cb3-3"><a href="index.html#cb3-3"></a>   runs<span class="op">-</span>on<span class="op">:</span> ubuntu<span class="op">-</span>latest</span>
-<span id="cb3-4"><a href="index.html#cb3-4"></a>   needs<span class="op">:</span> bookdown</span>
-<span id="cb3-5"><a href="index.html#cb3-5"></a>   steps<span class="op">:</span></span>
-<span id="cb3-6"><a href="index.html#cb3-6"></a>     <span class="op">-</span> name<span class="op">:</span> Checkout</span>
-<span id="cb3-7"><a href="index.html#cb3-7"></a>       uses<span class="op">:</span> actions<span class="op">/</span>checkout@v2</span>
-<span id="cb3-8"><a href="index.html#cb3-8"></a>     <span class="op">-</span> name<span class="op">:</span> Download artifact</span>
-<span id="cb3-9"><a href="index.html#cb3-9"></a>       uses<span class="op">:</span> actions<span class="op">/</span>download<span class="op">-</span>artifact@<span class="va">v1</span>.<span class="fl">0.0</span></span>
-<span id="cb3-10"><a href="index.html#cb3-10"></a>       <span class="cf">with</span><span class="op">:</span></span>
-<span id="cb3-11"><a href="index.html#cb3-11"></a>         # Artifact name</span>
-<span id="cb3-12"><a href="index.html#cb3-12"></a>         name<span class="op">:</span> _book # optional</span>
-<span id="cb3-13"><a href="index.html#cb3-13"></a>         # Destination path</span>
-<span id="cb3-14"><a href="index.html#cb3-14"></a>         path<span class="op">:</span> _book # optional</span>
-<span id="cb3-15"><a href="index.html#cb3-15"></a>     <span class="op">-</span> name<span class="op">:</span> Deploy to GitHub Pages</span>
-<span id="cb3-16"><a href="index.html#cb3-16"></a>       uses<span class="op">:</span> Cecilapp<span class="op">/</span>GitHub<span class="op">-</span>Pages<span class="op">-</span>deploy@v3</span>
-<span id="cb3-17"><a href="index.html#cb3-17"></a>       env<span class="op">:</span></span>
-<span id="cb3-18"><a href="index.html#cb3-18"></a>          GITHUB_TOKEN<span class="op">:</span> $<span class="op">{{</span> <span class="va">secrets</span>.<span class="at">GITHUB_TOKEN</span> <span class="op">}}</span> # https<span class="op">:</span><span class="co">//github.com/settings/tokens</span></span>
-<span id="cb3-19"><a href="index.html#cb3-19"></a>       <span class="cf">with</span><span class="op">:</span></span>
-<span id="cb3-20"><a href="index.html#cb3-20"></a>          email<span class="op">:</span> <span class="va">Craig</span>.<span class="at">Marsh</span>@<span class="va">niwa</span>.<span class="va">co</span>.<span class="at">nz</span>               # must be a verified email</span>
-<span id="cb3-21"><a href="index.html#cb3-21"></a>          build_dir<span class="op">:</span> _book<span class="op">/</span>                     # <span class="st">&quot;_site/&quot;</span> by <span class="im">default</span></span>
-<span id="cb3-22"><a href="index.html#cb3-22"></a>          branch<span class="op">:</span> gh<span class="op">-</span>pages                    # hosted</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="index.html#cb3-1"></a># gh<span class="op">-</span>action <span class="im">from</span> Cecilapp<span class="op">/</span>GitHub<span class="op">-</span>Pages<span class="op">-</span>deploy</span>
+<span id="cb3-2"><a href="index.html#cb3-2"></a>checkout<span class="op">-</span>and<span class="op">-</span>deploy<span class="op">:</span></span>
+<span id="cb3-3"><a href="index.html#cb3-3"></a> runs<span class="op">-</span>on<span class="op">:</span> ubuntu<span class="op">-</span>latest</span>
+<span id="cb3-4"><a href="index.html#cb3-4"></a> needs<span class="op">:</span> bookdown</span>
+<span id="cb3-5"><a href="index.html#cb3-5"></a> steps<span class="op">:</span></span>
+<span id="cb3-6"><a href="index.html#cb3-6"></a>   <span class="op">-</span> name<span class="op">:</span> Checkout</span>
+<span id="cb3-7"><a href="index.html#cb3-7"></a>     uses<span class="op">:</span> actions<span class="op">/</span>checkout@v2</span>
+<span id="cb3-8"><a href="index.html#cb3-8"></a>   <span class="op">-</span> name<span class="op">:</span> Download artifact</span>
+<span id="cb3-9"><a href="index.html#cb3-9"></a>     uses<span class="op">:</span> actions<span class="op">/</span>download<span class="op">-</span>artifact@<span class="va">v1</span>.<span class="fl">0.0</span></span>
+<span id="cb3-10"><a href="index.html#cb3-10"></a>     <span class="cf">with</span><span class="op">:</span></span>
+<span id="cb3-11"><a href="index.html#cb3-11"></a>       # Artifact name</span>
+<span id="cb3-12"><a href="index.html#cb3-12"></a>       name<span class="op">:</span> _book # optional</span>
+<span id="cb3-13"><a href="index.html#cb3-13"></a>       # Destination path</span>
+<span id="cb3-14"><a href="index.html#cb3-14"></a>       path<span class="op">:</span> _book # optional</span>
+<span id="cb3-15"><a href="index.html#cb3-15"></a>   <span class="op">-</span> name<span class="op">:</span> Deploy to GitHub Pages</span>
+<span id="cb3-16"><a href="index.html#cb3-16"></a>     uses<span class="op">:</span> Cecilapp<span class="op">/</span>GitHub<span class="op">-</span>Pages<span class="op">-</span>deploy@v3</span>
+<span id="cb3-17"><a href="index.html#cb3-17"></a>     env<span class="op">:</span></span>
+<span id="cb3-18"><a href="index.html#cb3-18"></a>        GITHUB_TOKEN<span class="op">:</span> $<span class="op">{{</span> <span class="va">secrets</span>.<span class="at">GITHUB_TOKEN</span> <span class="op">}}</span> # https<span class="op">:</span><span class="co">//github.com/settings/tokens</span></span>
+<span id="cb3-19"><a href="index.html#cb3-19"></a>     <span class="cf">with</span><span class="op">:</span></span>
+<span id="cb3-20"><a href="index.html#cb3-20"></a>        email<span class="op">:</span> <span class="va">Craig</span>.<span class="at">Marsh</span>@<span class="va">niwa</span>.<span class="va">co</span>.<span class="at">nz</span>               # must be a verified email</span>
+<span id="cb3-21"><a href="index.html#cb3-21"></a>        build_dir<span class="op">:</span> _book<span class="op">/</span>                     # <span class="st">&quot;_site/&quot;</span> by <span class="im">default</span></span>
+<span id="cb3-22"><a href="index.html#cb3-22"></a>        branch<span class="op">:</span> gh<span class="op">-</span>pages                    # hosted</span></code></pre></div>
 <p>the parameters and inputs for this github action may change over time, to see the latest options and version <a href="https://github.com/Cecilapp/GitHub-Pages-deploy">see here</a>. The key component of this process is making sure your repository allows read and write access for the workflow. To see and change these go to settings tab (see figure above) of your github repository followed by the Actions tab scroll down to the <code>Workflow permissions</code> section where you want to make sure it is set to read and write.</p>
 <p>Once you push that workflow fingers crossed it will render and publish.</p>
 
