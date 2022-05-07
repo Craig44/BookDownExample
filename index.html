@@ -4,29 +4,32 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>A Minimal Book Example</title>
+  <title>An Example book down</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+In addition to hosting on github pages.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="A Minimal Book Example" />
+  <meta property="og:title" content="An Example book down" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+In addition to hosting on github pages.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta name="github-repo" content="https://github.com/Craig44/BookDownExample" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A Minimal Book Example" />
+  <meta name="twitter:title" content="An Example book down" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+In addition to hosting on github pages.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   
 
-<meta name="author" content="John Doe" />
+<meta name="author" content="C.Marsh" />
 
 
 <meta name="date" content="2022-05-07" />
@@ -144,9 +147,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#process-to-publish-bookdown-on-gh-page"><i class="fa fa-check"></i><b>1.1</b> Process to publish bookdown on GH page</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>2</b> Hello bookdown</a><ul>
 <li class="chapter" data-level="2.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>2.1</b> A section</a><ul>
@@ -185,7 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An Example book down</a>
           </h1>
         </div>
 
@@ -194,34 +195,73 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">A Minimal Book Example</h1>
-<p class="author"><em>John Doe</em></p>
+<h1 class="title">An Example book down</h1>
+<p class="author"><em>C.Marsh</em></p>
 <p class="date"><em>2022-05-07</em></p>
 </div>
 <div id="about" class="section level1 hasAnchor">
 <h1><span class="header-section-number">Chapter 1</span> About<a href="index.html#about" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports; for example, a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<div id="usage" class="section level2 hasAnchor">
-<h2><span class="header-section-number">1.1</span> Usage<a href="index.html#usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Each <strong>bookdown</strong> chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter <em>must</em> start with a first-level heading: <code># A good chapter</code>, and can contain one (and only one) first-level heading.</p>
-<p>Use second-level and higher headings within chapters like: <code>## A short section</code> or <code>### An even shorter section</code>.</p>
-<p>The <code>index.Rmd</code> file is required, and is also your first book chapter. It will be the homepage when you render the book.</p>
+<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. The purpose was to learn how to host a bookdown on a github pages site for future projects of mine. Any repo can have a bookdown directory which can then be used by Github actions to host it on a gihub page. For example, the bookdown location that created this page is in the sub-directory called <strong>Documentation</strong> at <a href="https://github.com/Craig44/BookDownExample" class="uri">https://github.com/Craig44/BookDownExample</a>.</p>
+<div id="process-to-publish-bookdown-on-gh-page" class="section level2 hasAnchor">
+<h2><span class="header-section-number">1.1</span> Process to publish bookdown on GH page<a href="index.html#process-to-publish-bookdown-on-gh-page" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Create a folder in your github repository that contains your bookdown. A good way to get started is to download the GitHub repository <a href="https://github.com/rstudio/bookdown-demo" class="uri">https://github.com/rstudio/bookdown-demo</a> as a Zip file, then unzip it locally. This is a minimal bookdown that is very helpful to get started.</p>
+<p>Once you have a bookdown that compiles locally commit and push the necessary files to the remote repository and create a github actions workflow. I use the following yaml script can be <a href="https://github.com/Craig44/BookDownExample/blob/main/.github/workflows/deploy_bookdown.yml">found here</a>. Which we will work through soon. Before we do that, the next thing you will need to do is setup a github.io for your username or organisation <a href="https://pages.github.com/">see here</a> for more information. The next thing you will need is to create an empty branch on your github repository to deploy the bookdown. I used the git command line calls below which was taken from <a href="https://gist.github.com/ramnathv/2227408">here</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="bu">cd</span> /path/to/repo-name</span>
+<span id="cb1-2"><a href="index.html#cb1-2"></a><span class="fu">git</span> symbolic-ref HEAD refs/heads/gh-pages</span>
+<span id="cb1-3"><a href="index.html#cb1-3"></a><span class="fu">rm</span> .git/index</span>
+<span id="cb1-4"><a href="index.html#cb1-4"></a><span class="fu">git</span> clean -fdx</span>
+<span id="cb1-5"><a href="index.html#cb1-5"></a><span class="bu">echo</span> <span class="st">&quot;My GitHub Page&quot;</span> <span class="op">&gt;</span> index.html</span>
+<span id="cb1-6"><a href="index.html#cb1-6"></a><span class="fu">git</span> add .</span>
+<span id="cb1-7"><a href="index.html#cb1-7"></a><span class="fu">git</span> commit -a -m <span class="st">&quot;First pages commit&quot;</span></span>
+<span id="cb1-8"><a href="index.html#cb1-8"></a><span class="fu">git</span> push origin gh-pages</span></code></pre></div>
+<p>To test you have set up the github.io and gh-pages branch correctly, you should be able to visit <code>USERNAME.github.io/REPONAME</code> or if it is with an organization <code>ORGANISATION.github.io/REPONAME</code> and see a website that has <code>My GitHub Page</code> displayed from the above gh-page branch. A tip if you can’t see the webpage, go to the settings tab in your repository and go to the pages tab. This will tell you where/if your webpage is being hosted.</p>
+<div class="figure">
+<img src="Figures/settingsTab.png" style="width:50.0%" alt="" />
+<p class="caption">Settings tab</p>
 </div>
-<div id="render-book" class="section level2 hasAnchor">
-<h2><span class="header-section-number">1.2</span> Render book<a href="index.html#render-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You can render the HTML version of this example book without changing anything:</p>
-<ol style="list-style-type: decimal">
-<li><p>Find the <strong>Build</strong> pane in the RStudio IDE, and</p></li>
-<li><p>Click on <strong>Build Book</strong>, then select your output format, or select “All formats” if you’d like to use multiple formats from the same book source files.</p></li>
-</ol>
-<p>Or build the book from the R console:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a>bookdown<span class="op">::</span><span class="kw">render_book</span>()</span></code></pre></div>
-<p>To render this example to PDF as a <code>bookdown::pdf_book</code>, you’ll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.org/tinytex/" class="uri">https://yihui.org/tinytex/</a>.</p>
-</div>
-<div id="preview-book" class="section level2 hasAnchor">
-<h2><span class="header-section-number">1.3</span> Preview book<a href="index.html#preview-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in “Preview book”, or from the R console:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1"></a>bookdown<span class="op">::</span><span class="kw">serve_book</span>()</span></code></pre></div>
+<p>Once you have a github.io and gh-pages branch the next thing is to set up a github actions workflow. I will work through the following calls and explain the key points. The first section renders the gitbook into html files and saves it as an artifact called <code>_book</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="index.html#cb2-1"></a>jobs<span class="op">:</span></span>
+<span id="cb2-2"><a href="index.html#cb2-2"></a>  bookdown<span class="op">:</span></span>
+<span id="cb2-3"><a href="index.html#cb2-3"></a>    name<span class="op">:</span> Render<span class="op">-</span>Book</span>
+<span id="cb2-4"><a href="index.html#cb2-4"></a>    runs<span class="op">-</span>on<span class="op">:</span> macOS<span class="op">-</span>latest</span>
+<span id="cb2-5"><a href="index.html#cb2-5"></a>    steps<span class="op">:</span></span>
+<span id="cb2-6"><a href="index.html#cb2-6"></a>      <span class="op">-</span> uses<span class="op">:</span> actions<span class="op">/</span>checkout@v1</span>
+<span id="cb2-7"><a href="index.html#cb2-7"></a>      <span class="op">-</span> uses<span class="op">:</span> r<span class="op">-</span>lib<span class="op">/</span>actions<span class="op">/</span>setup<span class="op">-</span>r@v1</span>
+<span id="cb2-8"><a href="index.html#cb2-8"></a>      <span class="op">-</span> uses<span class="op">:</span> r<span class="op">-</span>lib<span class="op">/</span>actions<span class="op">/</span>setup<span class="op">-</span>pandoc@v1</span>
+<span id="cb2-9"><a href="index.html#cb2-9"></a>      <span class="op">-</span> name<span class="op">:</span> Install rmarkdown</span>
+<span id="cb2-10"><a href="index.html#cb2-10"></a>        run<span class="op">:</span> Rscript <span class="op">-</span>e <span class="st">&#39;install.packages(c(&quot;rmarkdown&quot;,&quot;bookdown&quot;))&#39;</span></span>
+<span id="cb2-11"><a href="index.html#cb2-11"></a>      <span class="op">-</span> name<span class="op">:</span> Render Book</span>
+<span id="cb2-12"><a href="index.html#cb2-12"></a>        run<span class="op">:</span> Rscript <span class="op">-</span>e <span class="st">&#39;bookdown::render_book(input = &quot;Documentation&quot;)&#39;</span></span>
+<span id="cb2-13"><a href="index.html#cb2-13"></a>      <span class="op">-</span> uses<span class="op">:</span> actions<span class="op">/</span>upload<span class="op">-</span>artifact@v1</span>
+<span id="cb2-14"><a href="index.html#cb2-14"></a>        <span class="cf">with</span><span class="op">:</span></span>
+<span id="cb2-15"><a href="index.html#cb2-15"></a>          name<span class="op">:</span> _book</span>
+<span id="cb2-16"><a href="index.html#cb2-16"></a>          path<span class="op">:</span> Documentation<span class="op">/</span>_book<span class="op">/</span></span></code></pre></div>
+<p>The key parameters in this are <code>bookdown::render_book(input = "Documentation")</code> where if your bookdown is in a subdirectory you need to provid that directory by the <code>input</code> parameter. In addition to the artifact path on the last line <code>path: Documentation/_book/</code>. See how they are both <code>Documentation</code>, that is because this is the directory of my bookdown but this could be any directory that you store your bookdown in.</p>
+<p>The next section of the workflow takes the artifact called <code>_book</code> publishes it to the branch called <code>gh-pages</code> where it can be visualised at your github.io site.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="index.html#cb3-1"></a>  # gh<span class="op">-</span>action <span class="im">from</span> Cecilapp<span class="op">/</span>GitHub<span class="op">-</span>Pages<span class="op">-</span>deploy</span>
+<span id="cb3-2"><a href="index.html#cb3-2"></a>  checkout<span class="op">-</span>and<span class="op">-</span>deploy<span class="op">:</span></span>
+<span id="cb3-3"><a href="index.html#cb3-3"></a>   runs<span class="op">-</span>on<span class="op">:</span> ubuntu<span class="op">-</span>latest</span>
+<span id="cb3-4"><a href="index.html#cb3-4"></a>   needs<span class="op">:</span> bookdown</span>
+<span id="cb3-5"><a href="index.html#cb3-5"></a>   steps<span class="op">:</span></span>
+<span id="cb3-6"><a href="index.html#cb3-6"></a>     <span class="op">-</span> name<span class="op">:</span> Checkout</span>
+<span id="cb3-7"><a href="index.html#cb3-7"></a>       uses<span class="op">:</span> actions<span class="op">/</span>checkout@v2</span>
+<span id="cb3-8"><a href="index.html#cb3-8"></a>     <span class="op">-</span> name<span class="op">:</span> Download artifact</span>
+<span id="cb3-9"><a href="index.html#cb3-9"></a>       uses<span class="op">:</span> actions<span class="op">/</span>download<span class="op">-</span>artifact@<span class="va">v1</span>.<span class="fl">0.0</span></span>
+<span id="cb3-10"><a href="index.html#cb3-10"></a>       <span class="cf">with</span><span class="op">:</span></span>
+<span id="cb3-11"><a href="index.html#cb3-11"></a>         # Artifact name</span>
+<span id="cb3-12"><a href="index.html#cb3-12"></a>         name<span class="op">:</span> _book # optional</span>
+<span id="cb3-13"><a href="index.html#cb3-13"></a>         # Destination path</span>
+<span id="cb3-14"><a href="index.html#cb3-14"></a>         path<span class="op">:</span> _book # optional</span>
+<span id="cb3-15"><a href="index.html#cb3-15"></a>     <span class="op">-</span> name<span class="op">:</span> Deploy to GitHub Pages</span>
+<span id="cb3-16"><a href="index.html#cb3-16"></a>       uses<span class="op">:</span> Cecilapp<span class="op">/</span>GitHub<span class="op">-</span>Pages<span class="op">-</span>deploy@v3</span>
+<span id="cb3-17"><a href="index.html#cb3-17"></a>       env<span class="op">:</span></span>
+<span id="cb3-18"><a href="index.html#cb3-18"></a>          GITHUB_TOKEN<span class="op">:</span> $<span class="op">{{</span> <span class="va">secrets</span>.<span class="at">GITHUB_TOKEN</span> <span class="op">}}</span> # https<span class="op">:</span><span class="co">//github.com/settings/tokens</span></span>
+<span id="cb3-19"><a href="index.html#cb3-19"></a>       <span class="cf">with</span><span class="op">:</span></span>
+<span id="cb3-20"><a href="index.html#cb3-20"></a>          email<span class="op">:</span> <span class="va">Craig</span>.<span class="at">Marsh</span>@<span class="va">niwa</span>.<span class="va">co</span>.<span class="at">nz</span>               # must be a verified email</span>
+<span id="cb3-21"><a href="index.html#cb3-21"></a>          build_dir<span class="op">:</span> _book<span class="op">/</span>                     # <span class="st">&quot;_site/&quot;</span> by <span class="im">default</span></span>
+<span id="cb3-22"><a href="index.html#cb3-22"></a>          branch<span class="op">:</span> gh<span class="op">-</span>pages                    # hosted</span></code></pre></div>
+<p>the parameters and inputs for this github action may change over time, to see the latest options and version <a href="https://github.com/Cecilapp/GitHub-Pages-deploy">see here</a>. THe key thing in this set up is makeing sure your repository allows read and write functions for the workflow. To see and change these go to settings tab of your github repository followed by the Actions tab scroll down to the <code>Workflow permissions</code> section where you want to make sure it is set to read and write.</p>
+<p>Once you push that workflow fingers crossed it will render and publish.</p>
 
 </div>
 </div>

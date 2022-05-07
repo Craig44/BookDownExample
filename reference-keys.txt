@@ -3,9 +3,7 @@ tab:nice-tab
 eq:binom
 thm:tri
 about
-usage
-render-book
-preview-book
+process-to-publish-bookdown-on-gh-page
 hello-bookdown
 a-section
 cross
